@@ -36,6 +36,7 @@ coding!
 
 - Val Lysenko: [GitHub](https://github.com/Valeriusdev) / [LinkedIn](https://linkedin.com/in/valeriylysenko)
 - Rigo: [GitHub](https://github.com/r1g023) / [LinkedIn](https://linkedin.com/in/rigo0101)
+- Sumi Tharayil: [GitHub](https://github.com/ci-sumi) / [LinkedIn](https://www.linkedin.com/in/sumi-tharayil/)
 
    ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
