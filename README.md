@@ -38,6 +38,7 @@ coding!
 - Rigo: [GitHub](https://github.com/r1g023) / [LinkedIn](https://linkedin.com/in/rigo0101)
 - Sumi Tharayil: [GitHub](https://github.com/ci-sumi) / [LinkedIn](https://www.linkedin.com/in/sumi-tharayil/)
 - Katia: [GitHub](https://github.com/katiaku) / [LinkedIn](https://www.linkedin.com/in/ekaterina-kushnir-mikhaylova/)
+- Hala: [GitHub](https://github.com/HalaMadi) / [LinkedIn](https://www.linkedin.com/in/hala-madi8)
 
    ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
