@@ -40,3 +40,4 @@ coding!
 - Katia: [GitHub](https://github.com/katiaku) / [LinkedIn](https://www.linkedin.com/in/ekaterina-kushnir-mikhaylova/)
 - Hala: [GitHub](https://github.com/HalaMadi) / [LinkedIn](https://www.linkedin.com/in/hala-madi8)
 - Ruth Westnidge: [GitHub](https://github.com/rhw-repo) / [LinkedIn](https://www.linkedin.com/in/ruth-westnidge/)
+- Nahul: [GitHub](https://github.com/nahul100) / [LinkedIn](https://www.linkedin.com/in/julker-nain-62aa8b2b2/)
