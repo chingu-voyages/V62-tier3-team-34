@@ -1,7 +1,7 @@
 <main class="mx-auto max-w-360">
   <!-- Hero -->
   <section
-    class="m-4 grid grid-cols-1 items-center gap-10 border border-blue-200 p-6 md:grid-cols-2 md:gap-20 md:p-20"
+    class="grid grid-cols-1 items-center gap-10 border border-blue-200 p-6 md:grid-cols-2 md:gap-20 md:p-20"
   >
     <div>
       <p
@@ -34,7 +34,10 @@
   </section>
 
   <!-- Book of the month + upcoming sessions -->
-  <section id="book-of-the-month" class="m-4 grid gap-8 p-6 md:grid-cols-3 md:p-20">
+  <section
+    id="book-of-the-month"
+    class="grid gap-8 p-6 pt-0 md:grid-cols-3 md:p-20 md:pt-0 border border-blue-200"
+  >
     <div class="md:col-span-2">
       @if (featuredBook(); as book) {
         <app-book-of-the-month [book]="book" />
