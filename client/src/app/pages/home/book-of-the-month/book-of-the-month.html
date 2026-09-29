@@ -1,4 +1,6 @@
-<article class="flex flex-col gap-8 rounded-2xl bg-linen p-8 shadow-card mt-0 sm:flex-row sm:items-center">
+<article
+  class="flex flex-col gap-8 rounded-2xl bg-linen p-8 shadow-card mt-0 sm:flex-row sm:items-center"
+>
   <img
     [src]="book().imageUrl"
     [alt]="book().title + ' cover'"
@@ -9,8 +11,15 @@
     <p class="text-xs font-semibold tracking-wider text-amber-700 uppercase">Book of the month</p>
     <p class="text-muted">by {{ book().author }}</p>
     <p class="leading-relaxed text-ink">{{ book().description }}</p>
-    <button class="self-start rounded-full bg-forest px-6 py-3 text-sm text-cream">
+    <button
+      class="group inline-flex items-center gap-2 self-start rounded-full bg-forest px-6 py-3 text-sm text-cream shadow-button transition hover:bg-taupe-950 hover:shadow-button-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700 motion-reduce:transition-none"
+    >
       Join Discussion
+      <span
+        aria-hidden="true"
+        class="transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
+        >→</span
+      >
     </button>
     <h3 class="font-serif text-4xl text-forest">{{ book().title }}</h3>
   </div>
