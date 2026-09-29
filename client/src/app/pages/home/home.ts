@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { BookOfTheMonth } from './book-of-the-month/book-of-the-month';
+import { BookService } from './book.service';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [BookOfTheMonth],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
-
+  private readonly bookService = inject(BookService);
+  protected readonly heroImage = '/images/home_hero.webp';
+  protected readonly heroAlt =
+    'A woman on a sofa reads a book on computer programming next to a pile of similar books and a laptop';
+  protected readonly featuredBook = toSignal(this.bookService.getBookOfTheMonth());
 }

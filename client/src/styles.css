@@ -1,1 +1,12 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-forest: #1a3222;
+  --color-cream: #faf6f0;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+  }
+}
