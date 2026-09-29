@@ -37,6 +37,7 @@ yarn-error.log
 testem.log
 /typings
 __screenshots__/
+.pnpm-store
 
 # System files
 .DS_Store
