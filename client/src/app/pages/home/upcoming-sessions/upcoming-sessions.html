@@ -1,4 +1,4 @@
-<h3 class="font-serif text-2xl text-forest">Upcoming Sessions</h3>
+<h2 class="font-serif text-2xl text-forest">Upcoming Sessions</h2>
 
 <ul class="mt-6 space-y-5">
   @for (session of sessions(); track session.startsAt) {
@@ -10,7 +10,7 @@
         <span class="font-serif text-lg text-forest">{{ session.startsAt | date: 'dd' }}</span>
       </div>
       <div>
-        <p class="text-xs text-amber-700">
+        <p class="text-xs text-gold">
           {{ session.startsAt | date: 'h:mm a' }} · Hosted by {{ session.host }}
         </p>
         <p class="font-serif text-forest">{{ session.title }}</p>
