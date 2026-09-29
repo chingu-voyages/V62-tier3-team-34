@@ -4,6 +4,8 @@ import { Book } from './book';
 import { MOCK_BOOKS, MOCK_CURATED_BOOKS } from './mock-books';
 import { Session } from './session';
 import { MOCK_SESSIONS } from './mock-sessions';
+import { MemberThought } from './member-thought';
+import { MOCK_MEMBER_THOUGHTS } from './mock-member-thoughts';
 
 @Injectable({ providedIn: 'root' })
 export class BookService {
@@ -17,5 +19,9 @@ export class BookService {
 
   getUpcomingSessions(): Observable<Session[]> {
     return of(MOCK_SESSIONS);
+  }
+
+  getLatestMemberThoughts(): Observable<MemberThought[]> {
+    return of(MOCK_MEMBER_THOUGHTS);
   }
 }

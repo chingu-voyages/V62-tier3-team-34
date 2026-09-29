@@ -3,11 +3,12 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { BookOfTheMonth } from './book-of-the-month/book-of-the-month';
 import { UpcomingSessions } from './upcoming-sessions/upcoming-sessions';
 import { BookCard } from './book-card/book-card';
+import { MemberThoughtCard } from './member-thought-card/member-thought-card';
 import { BookService } from './book.service';
 
 @Component({
   selector: 'app-home',
-  imports: [BookOfTheMonth, UpcomingSessions, BookCard],
+  imports: [BookOfTheMonth, UpcomingSessions, BookCard, MemberThoughtCard],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -21,6 +22,9 @@ export class Home {
     initialValue: [],
   });
   protected readonly curatedBooks = toSignal(this.bookService.getCuratedBooks(), {
+    initialValue: [],
+  });
+  protected readonly memberThoughts = toSignal(this.bookService.getLatestMemberThoughts(), {
     initialValue: [],
   });
 }
