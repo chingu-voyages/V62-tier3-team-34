@@ -57,8 +57,26 @@
     </aside>
   </section>
 
-  <!-- Highly regarded literature -->
-  <section class="py-12"></section>
+  <!-- Curated selection -->
+  <section class="p-6 md:p-20">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-xs font-semibold tracking-wider text-amber-700 uppercase">
+          Curated selection
+        </p>
+        <h2 class="mt-2 font-serif text-3xl text-forest md:text-4xl">Books Worth Your Time</h2>
+      </div>
+      <a href="#" class="text-sm font-semibold text-forest underline underline-offset-4">
+        See Full Reading List
+      </a>
+    </div>
+
+    <div class="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+      @for (book of curatedBooks(); track book.title) {
+        <app-book-card [book]="book" />
+      }
+    </div>
+  </section>
 
   <!-- Latest member thoughts -->
   <section class="py-12"></section>
