@@ -1,7 +1,7 @@
 <main class="mx-auto max-w-360">
   <!-- Hero -->
   <section
-    class="grid grid-cols-1 items-center gap-10 border border-blue-200 p-6 md:grid-cols-2 md:gap-20 md:p-20"
+    class="grid grid-cols-1 place-content-center gap-8 border border-blue-200 p-6 md:grid-cols-2 md:gap-20 md:p-20"
   >
     <div>
       <p
@@ -10,26 +10,34 @@
         <span class="h-px w-6 bg-amber-700"></span>
         Chingu Book Club
       </p>
-      <h1 class="mt-6 font-serif text-4xl leading-tight md:text-6xl">
+      <h1 class="mt-4 font-serif text-4xl leading-tight md:mt-6 md:text-6xl">
         Better code starts with better conversations.
       </h1>
-      <p class="mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
+      <p class="mt-4 max-w-xl text-lg leading-relaxed text-stone-600 md:mt-6">
         Read alongside other Chingu developers, share what clicked, and learn what the job doesn't
         teach you on day one.
       </p>
+      <div
+        class="mx-auto mt-8 flex w-fit flex-col gap-3 sm:mx-0 sm:w-auto sm:flex-row sm:justify-between sm:gap-4 md:mt-10"
+      >
+        <button
+          class="rounded-sm bg-forest px-6 py-2.5 whitespace-nowrap text-neutral-50 md:px-8 md:py-4"
+        >
+          Become a Member
+        </button>
+        <button
+          class="rounded-sm border-1 border-forest px-6 py-2.5 whitespace-nowrap text-forest md:px-8 md:py-4"
+        >
+          See What We're Reading
+        </button>
+      </div>
     </div>
-    <div>
+    <div class="relative aspect-[1171/896] md:aspect-auto">
       <img
         [src]="heroImage"
         [alt]="heroAlt"
-        class="aspect-[4/3] w-full max-w-120 rounded-lg object-cover shadow-xl"
+        class="absolute inset-y-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 rounded-lg shadow-xl"
       />
-    </div>
-    <div class="flex justify-between">
-      <button class="rounded-sm bg-forest px-8 py-4 text-neutral-50">Become a Member</button>
-      <button class="rounded-sm border-1 border-forest text-forest px-8 py-4">
-        See What We're Reading
-      </button>
     </div>
   </section>
 
@@ -45,7 +53,7 @@
     </div>
 
     <aside class="rounded-2xl border border-stone-200 p-8">
-      <!-- Upcoming sessions: next step -->
+      <app-upcoming-sessions [sessions]="upcomingSessions()" />
     </aside>
   </section>
 
