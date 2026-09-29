@@ -44,21 +44,21 @@
   <!-- Book of the month + upcoming sessions -->
   <section
     id="book-of-the-month"
-    class="grid gap-8 p-6 pt-0 md:grid-cols-3 md:p-20 md:pt-0 border border-blue-200"
+    class="grid gap-8 p-6 pt-0 md:p-20 md:pt-0 lg:grid-cols-[1fr_26.25rem] lg:gap-12 bg-neutral-50 border border-blue-200"
   >
-    <div class="md:col-span-2">
+    <div>
       @if (featuredBook(); as book) {
         <app-book-of-the-month [book]="book" />
       }
     </div>
 
-    <aside class="rounded-2xl border border-stone-200 p-8">
+    <aside class="rounded-2xl border border-sand bg-cream p-8 shadow-card">
       <app-upcoming-sessions [sessions]="upcomingSessions()" />
     </aside>
   </section>
 
   <!-- Curated selection -->
-  <section class="p-6 md:p-20">
+  <section class="p-6 md:p-20 border border-blue-200">
     <div class="flex flex-wrap items-end justify-between gap-4">
       <div>
         <p class="text-xs font-semibold tracking-wider text-amber-700 uppercase">
@@ -79,5 +79,5 @@
   </section>
 
   <!-- Latest member thoughts -->
-  <section class="py-12"></section>
+  <section class="py-12 border border-blue-200"></section>
 </main>

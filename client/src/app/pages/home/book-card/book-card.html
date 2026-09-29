@@ -1,5 +1,5 @@
-<article class="flex h-full flex-col rounded-lg bg-linen p-4">
-  <div class="aspect-[3/4] w-full overflow-hidden rounded-sm bg-stone-300">
+<article class="flex h-full flex-col rounded-lg bg-linen p-4 shadow-card">
+  <div class="aspect-[3/4] w-full overflow-hidden rounded-sm bg-stone-300 shadow-book">
     @if (!imageFailed()) {
       <img
         [src]="book().imageUrl"
@@ -18,9 +18,16 @@
   <p class="text-sm text-stone-500">by {{ book().author }}</p>
 
   @if (book().rating; as rating) {
-    <p class="mt-2 flex items-center gap-0.5 text-sm" [attr.aria-label]="'Rated ' + rating + ' out of 5'">
+    <p
+      class="mt-2 flex items-center gap-0.5 text-sm"
+      [attr.aria-label]="'Rated ' + rating + ' out of 5'"
+    >
       @for (star of stars; track star) {
-        <span aria-hidden="true" [class]="star <= rating + 0.5 ? 'text-amber-600' : 'text-stone-300'">★</span>
+        <span
+          aria-hidden="true"
+          [class]="star <= rating + 0.5 ? 'text-amber-600' : 'text-stone-300'"
+          >★</span
+        >
       }
       <span aria-hidden="true" class="ml-2 font-semibold text-forest">{{ rating }}</span>
     </p>

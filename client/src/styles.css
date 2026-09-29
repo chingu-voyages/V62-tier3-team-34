@@ -4,6 +4,12 @@
   --color-forest: #1a3222;
   --color-cream: #faf6f0;
   --color-linen: #f3ede4;
+  --color-sand: #e7e2d8;
+  --color-ink: #1f2320;
+  --color-muted: #696d68;
+
+  --shadow-book: 0 8px 16px 0 rgb(31 35 32 / 0.1682);
+  --shadow-card: 0 1px 2px 0 rgb(31 35 32 / 0.06), 0 4px 12px 0 rgb(31 35 32 / 0.08);
 }
 
 @layer base {
