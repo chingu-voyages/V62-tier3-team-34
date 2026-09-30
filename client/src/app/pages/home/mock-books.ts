@@ -6,7 +6,7 @@ export const MOCK_BOOKS: Book[] = [
     title: 'Intricacies Of Modern Angular',
     author: 'Val Lysenko',
     description: 'The big ideas behind Angular with .NET applications',
-    imageUrl: '/images/Val_Book.webp',
+    imageUrl: '/images/val_book.webp',
   },
 ];
 
