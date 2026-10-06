@@ -1,5 +1,5 @@
 <article class="flex h-full flex-col rounded-lg bg-linen p-4 shadow-card">
-  <div class="aspect-[3/4] w-full overflow-hidden rounded-sm bg-stone-300 shadow-book">
+  <div class="aspect-[3/4] w-full overflow-hidden lg:mx-auto lg:w-3/4 rounded-sm bg-stone-300 shadow-book">
     @if (!imageFailed()) {
       <img
         [src]="book().imageUrl"
@@ -14,12 +14,12 @@
     }
   </div>
 
-  <h3 class="mt-4 font-serif text-lg text-forest">{{ book().title }}</h3>
+  <h3 class="mt-4 font-serif text-base text-forest md:text-lg">{{ book().title }}</h3>
   <p class="text-sm text-stone-500">by {{ book().author }}</p>
 
   @if (book().rating; as rating) {
     <p
-      class="mt-2 flex items-center gap-0.5 text-sm"
+      class="mt-auto flex items-center gap-0.5 pt-2 text-sm"
       [attr.aria-label]="'Rated ' + rating + ' out of 5'"
     >
       @for (star of stars; track star) {
