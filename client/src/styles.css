@@ -3,4 +3,10 @@
 @theme {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
+
+  --color-parchment: #FAF7F0;
+  --color-card: #F3EDE4;
+  --color-forest: #1A3222;
+  --color-gold: #C49A45;
+  --color-muted: #8A8478;
 }
