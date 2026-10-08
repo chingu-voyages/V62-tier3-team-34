@@ -1,0 +1,16 @@
+<article class="flex h-full flex-col gap-4 rounded-lg bg-linen p-6 shadow-card">
+  <div class="flex items-center gap-3">
+    <span
+      aria-hidden="true"
+      class="flex size-10 shrink-0 items-center justify-center rounded-full bg-forest text-sm font-semibold text-cream"
+    >
+      {{ initials() }}
+    </span>
+    <div>
+      <p class="text-sm font-semibold text-forest">{{ thought().name }}</p>
+      <p class="text-xs text-muted">{{ thought().role }}</p>
+    </div>
+  </div>
+
+  <blockquote class="font-serif leading-relaxed text-ink">"{{ thought().quote }}"</blockquote>
+</article>
