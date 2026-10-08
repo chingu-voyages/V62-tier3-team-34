@@ -1,0 +1,105 @@
+<main class="mx-auto max-w-360">
+  <!-- Hero -->
+  <section
+    class="grid grid-cols-1 place-content-center gap-8 p-6 md:gap-12 md:p-20 lg:grid-cols-2 lg:gap-20 phone-landscape:grid-cols-2 phone-landscape:gap-x-6 phone-landscape:gap-y-4 phone-landscape:p-6"
+  >
+    <div class="text-center sm:text-left phone-landscape:contents">
+      <p
+        class="flex items-center justify-center gap-3 text-xs font-semibold tracking-wider text-gold uppercase sm:justify-start phone-landscape:col-span-2"
+      >
+        <span class="h-px w-6 bg-gold"></span>
+        Chingu Book Club
+      </p>
+      <h1
+        class="mt-4 font-serif text-4xl leading-tight md:mt-6 md:text-6xl phone-landscape:col-span-2 phone-landscape:mt-0 phone-landscape:text-center phone-landscape:text-3xl"
+      >
+        Better code starts with better conversations.
+      </h1>
+      <p
+        class="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-stone-600 sm:mx-0 md:mt-6 phone-landscape:col-start-2 phone-landscape:row-start-3 phone-landscape:mt-0 phone-landscape:self-end phone-landscape:text-base"
+      >
+        Read alongside other Chingu developers, share what clicked, and learn what the job doesn't
+        teach you on day one.
+      </p>
+      <div
+        class="mx-auto mt-8 flex w-fit flex-col gap-3 sm:mx-0 sm:w-auto sm:flex-row sm:justify-between sm:gap-4 md:mt-10 phone-landscape:col-start-2 phone-landscape:row-start-4 phone-landscape:mt-0 phone-landscape:flex-col phone-landscape:self-start"
+      >
+        <button
+          class="rounded-sm bg-forest px-6 py-2.5 whitespace-nowrap text-neutral-50 shadow-button transition hover:-translate-y-0.5 hover:bg-taupe-950 hover:shadow-button-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700 active:translate-y-0 active:shadow-button motion-reduce:transition-none motion-reduce:hover:translate-y-0 md:px-8 md:py-4 phone-landscape:px-6 phone-landscape:py-2.5"
+        >
+          Become a Member
+        </button>
+        <button
+          class="rounded-sm border-1 border-forest px-6 py-2.5 whitespace-nowrap text-forest shadow-button transition hover:bg-forest hover:text-cream hover:shadow-button-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700 motion-reduce:transition-none md:px-8 md:py-4 phone-landscape:px-6 phone-landscape:py-2.5"
+        >
+          See What We're Reading
+        </button>
+      </div>
+    </div>
+    <div
+      class="relative aspect-[1171/896] lg:aspect-auto lg:min-h-80 phone-landscape:col-start-1 phone-landscape:row-span-2 phone-landscape:row-start-3"
+    >
+      <img
+        [src]="heroImage"
+        [alt]="heroAlt"
+        class="absolute inset-0 h-full w-full rounded-lg object-cover shadow-xl"
+      />
+    </div>
+  </section>
+
+  <!-- Book of the month + upcoming sessions -->
+  <section
+    id="book-of-the-month"
+    class="grid gap-8 p-6 md:p-20 lg:grid-cols-[1fr_26.25rem] lg:gap-12 bg-neutral-50"
+  >
+    <div>
+      @if (featuredBook(); as book) {
+        <app-book-of-the-month [book]="book" />
+      }
+    </div>
+
+    <aside class="rounded-2xl border border-sand bg-cream p-8 shadow-card">
+      <app-upcoming-sessions [sessions]="upcomingSessions()" />
+    </aside>
+  </section>
+
+  <!-- Curated selection -->
+  <section class="p-6 md:p-20">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-xs font-semibold tracking-wider text-gold uppercase">Curated selection</p>
+        <h2 class="mt-2 font-serif text-3xl text-forest md:text-4xl">Books Worth Your Time</h2>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-4 md:gap-6 phone-landscape:gap-6">
+      @for (book of curatedBooks().slice(0, 4); track book.title) {
+        <app-book-card
+          [book]="book"
+          class="w-[calc((100%-1rem)/2)] md:w-[calc((100%-3rem)/3)] phone-landscape:w-[calc((100%-4.5rem)/4)]"
+          [class]="$index === 3 ? 'md:hidden phone-landscape:block' : ''"
+        />
+      }
+    </div>
+    <div class="flex flex-wrap items-end justify-end mt-8">
+      <a
+        href="#"
+        class="text-sm font-semibold text-forest underline underline-offset-4 transition-all hover:underline-offset-8"
+      >
+        See Full Reading List
+      </a>
+    </div>
+  </section>
+
+  <!-- Latest member thoughts -->
+  <section class="p-6 md:p-20">
+    <p class="text-xs font-semibold tracking-wider text-gold uppercase">Deep discussions</p>
+    <h2 class="mt-2 font-serif text-3xl text-forest md:text-4xl">Latest Member Thoughts</h2>
+
+    <div class="mt-8 grid gap-6 md:grid-cols-2 md:gap-8">
+      @for (thought of memberThoughts(); track thought.name) {
+        <app-member-thought-card [thought]="thought" />
+      }
+    </div>
+  </section>
+</main>

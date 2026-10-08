@@ -1,4 +1,27 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@custom-variant phone-landscape (@media (orientation: landscape) and (max-height: 500px));
+
+@theme {
+  --color-forest: #1a3222;
+  --color-cream: #faf6f0;
+  --color-linen: #f3ede4;
+  --color-sand: #e7e2d8;
+  --color-ink: #1f2320;
+  --color-muted: #696d68;
+  --color-gold: oklch(55.5% 0.163 48.998); /* amber-700; Figma #c49a45 failed WCAG contrast */
+
+  --shadow-book: 0 8px 16px 0 rgb(31 35 32 / 0.1682);
+  --shadow-card: 0 1px 2px 0 rgb(31 35 32 / 0.06), 0 4px 12px 0 rgb(31 35 32 / 0.08);
+  --shadow-button: 0 1px 2px 0 rgb(31 35 32 / 0.12), 0 2px 6px 0 rgb(31 35 32 / 0.08);
+  --shadow-button-hover: 0 2px 4px 0 rgb(31 35 32 / 0.14), 0 6px 14px 0 rgb(31 35 32 / 0.12);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+  }
+}
 
 @theme {
   --font-serif: "Cormorant Garamond", serif;
