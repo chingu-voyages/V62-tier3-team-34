@@ -1,7 +1,18 @@
 import { Component } from '@angular/core';
+import { FeatureCardComponent } from './components/feature-card/feature-card';
+import { FEATURES_DATA } from './components/feature-card/feature.data';
+import { DiscussCardComponent } from './components/discuss-card/discuss-card';
+import { DISCUSS_CARD } from './components/discuss-card/discuss-card.data';
 
 @Component({
   selector: 'app-read-discuss',
-  template: `<h1 class="text-2xl font-bold">Read & Discuss page</h1>`,
+  templateUrl: './read-discuss.html',
+  imports: [
+    FeatureCardComponent,
+    DiscussCardComponent
+  ]
 })
-export class ReadDiscuss {}
+export class ReadDiscuss { 
+  features = FEATURES_DATA;
+  discussCards = DISCUSS_CARD;
+}
