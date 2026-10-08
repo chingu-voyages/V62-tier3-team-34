@@ -1,6 +1,6 @@
 <!-- Hero Section -->
  
-<section class="bg-parchment px-10 py-16">
+<section class=" px-10 py-16">
     <div class="flex justify-between mx-auto items-center gap-12 max-w-6xl" >
       <div class="flex flex-col items-start gap-6 md:w-1/2" >
       <div class="flex items-center gap-3" >
@@ -21,7 +21,7 @@
   </section>
 
 <!-- Feature Cards -->
- <section class ="bg-parchment px-10 py-16 md:px-10" >
+ <section class =" px-10 py-16 md:px-10" >
   <div class="mx-auto max-w-6xl" >
      <div class="flex items-center mb-6 gap-3" >
         <span class="w-6 h-px rounded-md bg-gold" ></span>
@@ -30,8 +30,25 @@
       <h2 class="font-serif text-4xl font-semibold leading-tight text-forest mb-6" >The Art of Deep Processing</h2>
       <p class="text-gray-600 text-base max-w-5xl leading-relaxed mb-6" >Slowing down to process syntax, structural themes, and personal resonances translates flat text into permanent wisdom.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-      @for (feature of features; track $index) {
+      @for (feature of features; track feature.id) {
        <app-feature-card class="block h-full" [feature]="feature" />
+      }
+        </div>
+  </div>
+ </section>
+
+<!-- Discuss Cards -->
+ <section class =" px-10 py-16 md:px-10" >
+  <div class="mx-auto max-w-6xl" >
+     <div class="flex items-center mb-6 gap-3" >
+        <span class="w-6 h-px rounded-md bg-gold" ></span>
+        <p class="text-xs font-semibold uppercase tracking-wide text-gold">Parlor Standards</p>
+      </div>
+      <h2 class="font-serif text-4xl font-semibold leading-tight text-forest mb-6" >How We Discuss at Chingu</h2>
+      <p class="text-gray-600 text-base max-w-5xl leading-relaxed mb-6" >Our shared sessions aim not for academic gatekeeping, but for warm, expansive, and highly respectful exploration of ideas.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      @for (discussCard of discussCards; track discussCard.id) {
+       <app-discuss-card class="block h-full" [discussCard]="discussCard" />
       }
         </div>
   </div>
