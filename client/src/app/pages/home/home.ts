@@ -1,7 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { BookOfTheMonth } from './book-of-the-month/book-of-the-month';
+import { UpcomingSessions } from './upcoming-sessions/upcoming-sessions';
+import { BookCard } from './book-card/book-card';
+import { MemberThoughtCard } from './member-thought-card/member-thought-card';
+import { BookService } from './book.service';
 
 @Component({
   selector: 'app-home',
-  template: `<h1 class="text-2xl font-bold">Home page</h1>`,
+  imports: [BookOfTheMonth, UpcomingSessions, BookCard, MemberThoughtCard],
+  templateUrl: './home.html',
+  styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+  private readonly bookService = inject(BookService);
+  protected readonly heroImage = '/images/home_hero.webp';
+  protected readonly heroAlt =
+    'A woman on a sofa reads a book on computer programming next to a pile of similar books and a laptop';
+  protected readonly featuredBook = toSignal(this.bookService.getBookOfTheMonth());
+  protected readonly upcomingSessions = toSignal(this.bookService.getUpcomingSessions(), {
+    initialValue: [],
+  });
+  protected readonly curatedBooks = toSignal(this.bookService.getCuratedBooks(), {
+    initialValue: [],
+  });
+  protected readonly memberThoughts = toSignal(this.bookService.getLatestMemberThoughts(), {
+    initialValue: [],
+  });
+}
