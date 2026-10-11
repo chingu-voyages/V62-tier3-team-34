@@ -1,36 +1,40 @@
 import { DiscussCard } from "../../interface";
 
-export const DISCUSS_CARD : DiscussCard[] =
-[
-    {
-        id: 1,
-        title : 'Ask Open-Ended Questions',
-        description : "Instead of asking, 'Did you like the ending?' explore: 'How did Donna Tartt use Julian's character to critique classical studies?'"
-    },
-    {
-        id: 2,
-        title : 'Share Honest Perspectives',
-        description : "Your personal, authentic reaction to a text is the lifeblood of our parlor. Disliking a highly regarded classic is highly valid if explored thoughtfully."
-    },
-    {
-        id: 3,
-        title : 'Practice Attentive Listening',
-        description : "Let conversations build sequentially. Respond to a colleague's observation before shifting the focus to your own highlighted passages."
-    },
-    {
-        id: 4,
-        title : 'Respectfully Debate',
-        description : "We celebrate divergent opinions. A healthy parlor thrives where members respectfully challenge interpretations and examine syntax together."
-    },
-    {
-        id: 5,
-        title : 'Mind the Spoilers',
-        description : "We follow strict milestones to preserve the narrative discovery for everyone. Save final chapter spoilers for the designated second-half parlor."
-    },
-    {
-        id: 6,
-        title : 'A Harbor of Solace',
-        description : "Our primary objective is authentic human connection through the beautiful structure of language. Arrive with curiosity, leave with insight."
-    },
-
-]
+export const DISCUSS_CARD: DiscussCard[] = [
+  {
+    id: 1,
+    title: 'Ask Open-Ended Questions',
+    description:
+      "Instead of asking, 'Did you like the chapter?' explore: 'Why did the author choose this architecture over the alternatives?'",
+  },
+  {
+    id: 2,
+    title: 'Share Honest Perspectives',
+    description:
+      'Your honest reaction is what makes a discussion useful. Disagreeing with a popular book or a best practice is valid if you can explain why.',
+  },
+  {
+    id: 3,
+    title: 'Practice Attentive Listening',
+    description:
+      "Let the conversation build. Respond to a teammate's point before moving on to your own notes or examples.",
+  },
+  {
+    id: 4,
+    title: 'Respectfully Debate',
+    description:
+      'We welcome different opinions. Healthy discussions challenge approaches, compare trade-offs, and examine code together without making it personal.',
+  },
+  {
+    id: 5,
+    title: 'Stay on the Agreed Chapters',
+    description:
+      'We read to agreed milestones so everyone can follow along. Save later chapters for the session where we cover them.',
+  },
+  {
+    id: 6,
+    title: 'A Safe Space to Learn',
+    description:
+      'Our goal is to learn together. Beginners and experienced developers are equally welcome, and no question is too basic. Arrive with curiosity, leave with insight.',
+  },
+];
