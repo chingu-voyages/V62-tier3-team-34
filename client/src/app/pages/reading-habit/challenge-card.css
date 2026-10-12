@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.challenge-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 196px;
+  border: 1px solid var(--color-sand);
+  border-radius: 0.75rem;
+  box-shadow: none;
+  padding: 1.35rem 1.2rem 1.3rem;
+}
+
+.challenge-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.challenge-card h4 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-forest);
+}
+
+.challenge-card p:last-of-type {
+  margin: 0.8rem 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
