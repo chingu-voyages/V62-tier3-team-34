@@ -3,6 +3,8 @@
 @custom-variant phone-landscape (@media (orientation: landscape) and (max-height: 500px));
 
 @theme {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
   --color-forest: #1a3222;
   --color-cream: #faf6f0;
   --color-linen: #f3ede4;
