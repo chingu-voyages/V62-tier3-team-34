@@ -29,14 +29,14 @@ describe('Home', () => {
     expect(compiled.querySelector('app-book-of-the-month')).toBeTruthy();
   });
 
-  it('should render one card per curated book', () => {
+  it('should render at most 4 curated book cards', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelectorAll('app-book-card')).toHaveSize(MOCK_CURATED_BOOKS.length);
+    expect(compiled.querySelectorAll('app-book-card')).toHaveLength(4);
   });
 
   it('should render one card per member thought', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelectorAll('app-member-thought-card')).toHaveSize(
+    expect(compiled.querySelectorAll('app-member-thought-card')).toHaveLength(
       MOCK_MEMBER_THOUGHTS.length,
     );
   });
