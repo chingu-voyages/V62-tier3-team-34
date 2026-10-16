@@ -1,41 +1,52 @@
-<header class="bg-amber-25 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-        <!-- Logo -->
-         <a routerLink="/" class="flex items-center gap-2 shrink-0">
-            <img
-            src="/images/chingu_actual_logo.png" alt="Chingu Book Club logo"
-            class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
-            <div><h1 class="text-lg sm:text-x1 font-bold text-amber-900">
-                CHINGU
-            </h1>
-        <p class="text-xs tracking-widest text-amber-700">
-            BOOK CLUB
-        </p>
-    </div>
-         </a>
-         <!-- navigation -->
-          <nav class="hidden md:flex items-center justify-center gap-3 lg:gap-5
-          -translate-x-8">
-            <a routerLink="/" class="text-amber-950 hover:text-green-900
-            whitespace-nowrap transition-colors duration-200">Home</a>
-            <a routerLink="/why-reading-matters" class="text-amber-950 hover:text-green-900
-            whitespace-nowrap transition-colors duration-200">Why Reading Matters</a>
-            <a routerLink="/reading-habit" class="text-amber-950 hover:text-green-900
-            whitespace-nowrap transition-colors duration-200">Reading Habit</a>
-            <a routerLink="/read-discuss" class="text-amber-950 hover:text-green-900
-            whitespace-nowrap transition-colors duration-200">Read & Discuss</a>
-            <a routerLink="/about" class="text-amber-950 hover:text-green-900
-            whitespace-nowrap transition-colors duration-200">About</a>
-            <a  routerLink="/sign-in" class="hidden md:inline-flex items-center justify-center
-               rounded-full border border-amber-900
-               px-5 py-2 text-amber-950 font-medium
-               transition-all duration-300 ease-in-out
-               hover:bg-white hover:text-green-900
-               hover:shadow-md hover:-translate-y-0.5 ml-4"
-      >
-                Sign In
+    <header class="bg-amber-25 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4  
+        flex items-center justify-between gap-4">
+            <!-- Logo -->
+            <a routerLink="/" class="flex items-center gap-2 shrink-0">
+                <img src="/images/chingu_actual_logo.png" alt="Chingu Book Club logo"
+                    class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-amber-900">
+                        CHINGU
+                    </h1>
+                    <p class="text-xs tracking-widest text-amber-700">
+                        BOOK CLUB
+                    </p>
+                </div>
             </a>
-          </nav>
+            <!-- navigation -->
+            <nav class="hidden md:flex items-center justify-center gap-3 lg:gap-5
+            -translate-x-8">
+                <a routerLink="/" class="text-amber-950 hover:text-green-900
+                whitespace-nowrap transition-colors duration-200">Home</a>
+                <a routerLink="/why-reading-matters" class="text-amber-950 hover:text-green-900
+                whitespace-nowrap transition-colors duration-200">Why Reading Matters</a>
+                <a routerLink="/reading-habit" class="text-amber-950 hover:text-green-900
+                whitespace-nowrap transition-colors duration-200">Reading Habit</a>
+                <a routerLink="/read-discuss" class="text-amber-950 hover:text-green-900
+                whitespace-nowrap transition-colors duration-200">Read & Discuss</a>
+                <a routerLink="/about" class="text-amber-950 hover:text-green-900
+                whitespace-nowrap transition-colors duration-200">About</a>
+                </nav>
+                <a routerLink="/sign-in" class="hidden md:inline-flex items-center justify-center
+                rounded-full border border-amber-900
+                px-5 py-2 text-amber-950 font-medium
+                transition-all duration-300 ease-in-out
+                hover:bg-white hover:text-green-900
+                hover:shadow-md hover:-translate-y-0.5 ml-4">
+                    Sign In
+                </a>
+            
+            <!-- Burger menu for mobile -->
+            @if (menuOpen) {
+            <nav class="md:hidden flex flex-col gap-1 pt-4 mt-4 border-t border-amber-200">
 
-    </div>
-</header>
+                <a routerLink="/" (click)="menuOpen = false"
+                    class="rounded-lg px-3 py-2 text-amber-950 hover:bg-white hover:text-green-900 transition-colors">
+                    Home
+                </a>
+            </nav>
+            }
+        </div>
+
+    </header>
