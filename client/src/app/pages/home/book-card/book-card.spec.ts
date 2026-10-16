@@ -52,7 +52,7 @@ describe('BookCard', () => {
 
   it('should fill stars to the nearest whole rating', () => {
     const compiled = render(book);
-    expect(compiled.querySelectorAll('.text-gold')).toHaveSize(3);
+    expect(compiled.querySelectorAll('.text-gold')).toHaveLength(3);
   });
 
   it('should hide the rating when the book has none', () => {
