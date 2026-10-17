@@ -66,16 +66,16 @@
     <!-- Mobile menu button -->
     <button
       type="button"
-      class="md:hidden justify-self-end rounded-lg p-2 text-amber-950
-       hover:bg-white transition-colors"
+      class="md:hidden flex h-11 w-11 shrink-0 items-center justify-center
+      rounded-lg  text-amber-950 hover:bg-white transition-colors"
       (click)="toggleMenu()"
       [attr.aria-expanded]="menuOpen()"
       aria-controls="mobile-navigation"
       aria-label="Toggle navigation menu">
       @if (menuOpen()) {
-        <span aria-hidden="true">✕</span>
+        <span aria-hidden="true" class="text-2xl leading-none">✕</span>
       } @else {
-        <span aria-hidden="true">☰</span>
+        <span aria-hidden="true" class="text-2xl leading-none">☰</span>
       }
     </button>
   </div>
