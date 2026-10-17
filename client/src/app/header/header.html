@@ -1,4 +1,4 @@
-<header class="bg-amber-25 shadow-sm">
+<header class=" relative bg-amber-25 shadow-sm">
   <div class="w-full max-w-none mx-0 px-4 sm:px-6 py-3 
   flex items-center justify-between gap-4">
     <!-- Logo -->
@@ -84,8 +84,9 @@
   @if (menuOpen()) {
     <nav
       id="mobile-navigation"
-      class="md:hidden flex flex-col gap-1 pt-4 px-4 pb-4 mt-4 border-t
-       border-amber-200"
+      class=" absolute top-full left-0 right-0 z-50 
+      md:hidden flex flex-col gap-1 pt-4 px-4 pb-4 border-t
+       border-amber-200 bg-amber-50 shadow-lg"
       aria-label="Mobile navigation">
       @if(router.url !== '/') {
       <a
