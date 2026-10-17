@@ -1,5 +1,5 @@
 <header class="bg-amber-25 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 
+  <div class="w-full max-w-none mx-0 px-4 sm:px-6 py-3 
   flex items-center justify-between gap-4">
     <!-- Logo -->
     <a routerLink="/" class="flex items-center gap-2 shrink-0">
@@ -15,7 +15,7 @@
     </a>
     <!-- navigation -->
     <nav class="hidden md:flex items-center 
-    justify-center gap-3 lg:gap-5 -translate-x-8">
+    justify-center gap-3 lg:gap-5 flex-1">
       <a
         routerLink="/"
         class="text-amber-950 hover:text-forest hover:-translate-y-0.5
@@ -50,12 +50,14 @@
     <a
       routerLink="/sign-in"
       class="hidden md:inline-flex items-center justify-center gap-2
-      rounded-full border border-forest bg-white px-6 py-3 text-amber-950 
-      font-medium transition hover:bg-forest hover:text-cream
+      rounded-full border border-forest bg-white px-6 py-2 leading-5
+       text-amber-950 
+      font-medium transition hover:bg-forest hover:text-cream shrink-0
+       whitespace-nowrap
       hover:shadow-button-hover focus-visible:outline-2 
       focus-visible:outline-offset-2
      focus-visible:outline-amber-700 
-      motion-reduce:transition-none ml-4">
+      motion-reduce:transition-none">
       Sign In
     </a>
 
