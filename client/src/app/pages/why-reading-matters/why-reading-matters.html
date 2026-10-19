@@ -1,0 +1,71 @@
+<main class="reading-page">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Literary covenant · Perspectives</p>
+      <h1>Why Reading Matters</h1>
+      <p class="hero-description">
+        In an age of relentless distraction, reading remains an act of quiet defiance. It is not
+        merely the decoding of words, but the patient cultivation of the soul.
+      </p>
+      <a class="button button-primary" routerLink="/read-discuss">Join the Dialogue</a>
+    </div>
+    <img
+      class="hero-image"
+      src="/images/home_hero.webp"
+      alt="A sunlit reading room lined with books and comfortable chairs"
+    />
+  </section>
+
+  <section class="pillars-section" aria-labelledby="pillars-heading">
+    <p class="eyebrow"><span></span> Cognitive & spiritual alignment</p>
+    <h2 id="pillars-heading">The Six Pillars of Literary Engagement</h2>
+    <p class="section-intro">
+      Deep textual study reshapes our neural pathways, broadens our conceptual vocabularies, and
+      tethers us to the shared human tapestry.
+    </p>
+
+    <div class="pillars-grid">
+      @for (pillar of pillars; track pillar.title) {
+        <article class="pillar-card">
+          <span class="pillar-icon" aria-hidden="true">{{ pillar.icon }}</span>
+          <h3>{{ pillar.title }}</h3>
+          <p>{{ pillar.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="ritual-card" aria-labelledby="ritual-heading">
+    <img
+      class="ritual-image"
+      src="/images/home_hero.webp"
+      alt="A quiet corner in a warm, book-filled library"
+    />
+    <div class="ritual-copy">
+      <p class="eyebrow">The daily liturgy</p>
+      <h2 id="ritual-heading">The 20-Minute Sanctuary</h2>
+      <p>
+        Set aside a little time each day, just fifteen to twenty minutes, to let your attention
+        settle. A small, steady reading ritual can become an oasis of contemplation in a busy week.
+        There is no finish line—only the quiet pleasure of returning to a page.
+      </p>
+      <blockquote>
+        “I read in order to explore new worlds, both real and imagined, and return to our own lives
+        with an altered, more compassionate gaze.”
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="invitation-card" aria-labelledby="invitation-heading">
+    <h2 id="invitation-heading">Step into the Philosophy Parlor</h2>
+    <p>
+      Chingu Book Club meets fortnightly to share discoveries, trade marginalia, and explore the
+      classical threads winding through contemporary stories. Membership is open to all who read
+      with intent.
+    </p>
+    <div class="invitation-actions">
+      <a class="button button-primary" routerLink="/about">Become a Member</a>
+      <a class="button button-outline" routerLink="/reading-habit">View Parlor Schedule</a>
+    </div>
+  </section>
+</main>

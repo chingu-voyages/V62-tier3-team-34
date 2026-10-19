@@ -1,0 +1,313 @@
+:host {
+  display: block;
+  color: #1f2320;
+}
+
+.reading-page {
+  width: min(100% - 3rem, 72rem);
+  margin-inline: auto;
+  padding: 2.75rem 0 3rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: clamp(2rem, 8vw, 7rem);
+  padding: 1.25rem 0 4.5rem;
+}
+
+.hero-copy {
+  max-width: 34rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0;
+  color: #986d2c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  width: 1.25rem;
+  height: 1px;
+  flex: 0 0 auto;
+  background: currentColor;
+}
+
+h1,
+h2,
+h3 {
+  color: #1a3222;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+}
+
+.hero h1 {
+  margin: 1.1rem 0 1.25rem;
+  font-size: clamp(2.65rem, 5vw, 4.3rem);
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.hero-description,
+.section-intro,
+.pillar-card p,
+.ritual-copy > p:not(.eyebrow),
+.invitation-card > p {
+  color: #696d68;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.hero-description {
+  margin: 0 0 1.5rem;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 19rem;
+  border-radius: 0.45rem;
+  object-fit: cover;
+  box-shadow: 0 0.75rem 1.25rem rgb(31 35 32 / 14%);
+}
+
+.button {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.35rem;
+  border: 1px solid #1a3222;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: 160ms;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 2px solid #986d2c;
+  outline-offset: 3px;
+}
+
+.button-primary {
+  background: #1a3222;
+  color: #faf6f0;
+}
+
+.button-primary:hover {
+  background: #294a33;
+}
+
+.button-outline {
+  background: transparent;
+  color: #1a3222;
+}
+
+.button-outline:hover {
+  background: #1a3222;
+  color: #faf6f0;
+}
+
+.pillars-section {
+  padding: 0 0 3.75rem;
+}
+
+.pillars-section h2,
+.ritual-copy h2,
+.invitation-card h2 {
+  margin: 0.65rem 0 0;
+  font-size: clamp(1.8rem, 3.3vw, 2.65rem);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.section-intro {
+  margin: 0.75rem 0 1.75rem;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pillar-card {
+  min-height: 10.5rem;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  background: #f3ede4;
+}
+
+.pillar-icon {
+  display: grid;
+  width: 2.1rem;
+  height: 2.1rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #1a3222;
+  color: #d9b76b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pillar-card h3 {
+  margin: 0.85rem 0 0.45rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.pillar-card p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.ritual-card {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 2.75rem;
+  padding: 2rem;
+  border-radius: 0.65rem;
+  background: #f3ede4;
+}
+
+.ritual-image {
+  display: block;
+  width: 100%;
+  height: 13rem;
+  border-radius: 0.4rem;
+  object-fit: cover;
+  object-position: 30% center;
+  box-shadow: 0 0.4rem 0.8rem rgb(31 35 32 / 14%);
+}
+
+.ritual-copy h2 {
+  margin-top: 0.35rem;
+  font-size: clamp(1.65rem, 2.6vw, 2.2rem);
+}
+
+.ritual-copy > p:not(.eyebrow) {
+  margin: 0.7rem 0;
+  font-size: 0.85rem;
+}
+
+.ritual-copy blockquote {
+  margin: 0.8rem 0 0;
+  padding: 0.8rem 1rem;
+  border-radius: 0.35rem;
+  background: #faf6f0;
+  color: #526051;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.invitation-card {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
+  border-radius: 0.65rem;
+  background: #f3ede4;
+  text-align: center;
+}
+
+.invitation-card h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.invitation-card > p {
+  max-width: 39rem;
+  margin: 0.75rem auto 1.5rem;
+}
+
+.invitation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .reading-page {
+    width: min(100% - 2rem, 40rem);
+    padding-top: 1.5rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .hero-image {
+    height: clamp(13rem, 55vw, 21rem);
+  }
+
+  .pillars-section {
+    padding-bottom: 2.5rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pillar-card {
+    padding: 1.2rem;
+  }
+
+  .ritual-card {
+    grid-template-columns: 9rem 1fr;
+    gap: 1.25rem;
+    padding: 1.4rem;
+  }
+
+  .ritual-image {
+    height: 12rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-card {
+    min-height: auto;
+  }
+
+  .ritual-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ritual-image {
+    height: 13rem;
+  }
+
+  .invitation-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
