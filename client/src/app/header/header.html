@@ -1,5 +1,10 @@
 <header class="sticky top-0 z-50 w-full shrink-0
-         bg-amber-50 shadow-sm border-b border-amber-200">
+        transition-all duration-300"
+        [class.bg-white/70]="scrolled"
+        [class.backdrop-blur-md]="scrolled"
+        [class.shadow-sm]="scrolled"
+        [class.border-b]="scrolled"
+        [class.border-black/5]="scrolled">
   <div class="w-full max-w-none mx-0 px-4 sm:px-6 py-3 
   flex items-center justify-between gap-4">
     <!-- Logo -->
@@ -87,7 +92,7 @@
       id="mobile-navigation"
       class=" absolute top-full left-0 right-0 z-50 
       md:hidden flex flex-col gap-1 pt-4 px-4 pb-4 border-t
-       border-amber-200 bg-amber-50 shadow-lg"
+      border-black/5 bg-white/95 backdrop-blur-md shadow-lg"
       aria-label="Mobile navigation">
       @if(router.url !== '/') {
       <a

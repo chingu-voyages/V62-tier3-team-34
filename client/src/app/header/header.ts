@@ -1,4 +1,4 @@
-import { Component,signal } from '@angular/core';
+import { Component,signal,HostListener } from '@angular/core';
 import { RouterLink,Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,12 @@ import { RouterLink,Router } from '@angular/router';
 })
 export class Header {
   constructor(public router: Router) {}
-  menuOpen= signal(false)
+  menuOpen= signal(false);
+  scrolled = false;
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 10;
+  }
   closeMenu(){
     this.menuOpen.set(false);
   }
