@@ -4,9 +4,8 @@
 }
 
 .reading-page {
-  width: min(100% - 3rem, 72rem);
+  width: min(100%, 90rem);
   margin-inline: auto;
-  padding: 2.75rem 0 3rem;
 }
 
 .hero {
@@ -14,7 +13,7 @@
   grid-template-columns: 1fr 0.9fr;
   align-items: center;
   gap: clamp(2rem, 8vw, 7rem);
-  padding: 1.25rem 0 4.5rem;
+  padding: 1.5rem 1.5rem 3rem;
 }
 
 .hero-copy {
@@ -50,8 +49,8 @@ h3 {
 }
 
 .hero h1 {
-  margin: 1.1rem 0 1.25rem;
-  font-size: clamp(2.65rem, 5vw, 4.3rem);
+  margin: 1rem 0;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
   letter-spacing: -0.045em;
   line-height: 1.08;
 }
@@ -62,8 +61,12 @@ h3 {
 .ritual-copy > p:not(.eyebrow),
 .invitation-card > p {
   color: #696d68;
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hero-description {
+  font-size: 1.125rem;
 }
 
 .hero-description {
@@ -84,10 +87,10 @@ h3 {
   min-height: 2.75rem;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem 1.35rem;
+  padding: 0.625rem 1.5rem;
   border: 1px solid #1a3222;
   border-radius: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
@@ -123,20 +126,20 @@ h3 {
 }
 
 .pillars-section {
-  padding: 0 0 3.75rem;
+  padding: 1.5rem 1.5rem 3rem;
 }
 
 .pillars-section h2,
 .ritual-copy h2,
 .invitation-card h2 {
-  margin: 0.65rem 0 0;
-  font-size: clamp(1.8rem, 3.3vw, 2.65rem);
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.875rem, 3vw, 2.25rem);
   letter-spacing: -0.03em;
   line-height: 1.2;
 }
 
 .section-intro {
-  margin: 0.75rem 0 1.75rem;
+  margin: 0.5rem 0 1.5rem;
 }
 
 .pillars-grid {
@@ -146,8 +149,7 @@ h3 {
 }
 
 .pillar-card {
-  min-height: 10.5rem;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 0.6rem;
   background: #f3ede4;
 }
@@ -166,15 +168,15 @@ h3 {
 }
 
 .pillar-card h3 {
-  margin: 0.85rem 0 0.45rem;
-  font-size: 1.12rem;
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.35;
 }
 
 .pillar-card p {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -183,8 +185,8 @@ h3 {
   grid-template-columns: 12rem 1fr;
   align-items: center;
   gap: 1.75rem;
-  margin-bottom: 2.75rem;
-  padding: 2rem;
+  margin: 0 1.5rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 0.65rem;
   background: #f3ede4;
 }
@@ -199,42 +201,33 @@ h3 {
   box-shadow: 0 0.4rem 0.8rem rgb(31 35 32 / 14%);
 }
 
-.ritual-copy h2 {
-  margin-top: 0.35rem;
-  font-size: clamp(1.65rem, 2.6vw, 2.2rem);
-}
-
 .ritual-copy > p:not(.eyebrow) {
-  margin: 0.7rem 0;
-  font-size: 0.875rem;
+  margin: 0.5rem 0;
 }
 
 .ritual-copy blockquote {
-  margin: 0.8rem 0 0;
-  padding: 0.8rem 1rem;
+  margin: 1rem 0 0;
+  padding: 1rem;
   border-radius: 0.35rem;
   background: #faf6f0;
   color: #526051;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
   line-height: 1.55;
 }
 
 .invitation-card {
-  padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
+  margin: 0 1.5rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   border-radius: 0.65rem;
   background: #f3ede4;
   text-align: center;
 }
 
-.invitation-card h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-}
-
 .invitation-card > p {
   max-width: 39rem;
-  margin: 0.75rem auto 1.5rem;
+  margin: 0.5rem auto 1.5rem;
 }
 
 .invitation-actions {
@@ -246,14 +239,13 @@ h3 {
 
 @media (max-width: 760px) {
   .reading-page {
-    width: min(100% - 2rem, 40rem);
-    padding-top: 1.5rem;
+    width: min(100%, 40rem);
   }
 
   .hero {
     grid-template-columns: 1fr;
     gap: 1.75rem;
-    padding-bottom: 3.25rem;
+    padding-bottom: 2rem;
   }
 
   .hero-image {
@@ -261,21 +253,17 @@ h3 {
   }
 
   .pillars-section {
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
 
   .pillars-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .pillar-card {
-    padding: 1.2rem;
-  }
-
   .ritual-card {
     grid-template-columns: 9rem 1fr;
     gap: 1.25rem;
-    padding: 1.4rem;
+    padding: 1.25rem;
   }
 
   .ritual-image {
@@ -286,10 +274,6 @@ h3 {
 @media (max-width: 520px) {
   .pillars-grid {
     grid-template-columns: 1fr;
-  }
-
-  .pillar-card {
-    min-height: auto;
   }
 
   .ritual-card {
@@ -303,6 +287,39 @@ h3 {
   .invitation-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero,
+  .pillars-section {
+    padding: 5rem;
+  }
+
+  .hero h1 {
+    margin-top: 1.5rem;
+  }
+
+  .pillar-card {
+    padding: 1.5rem;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .ritual-card {
+    margin: 0 5rem 5rem;
+    padding: 2rem;
+  }
+
+  .invitation-card {
+    margin: 0 5rem 5rem;
+    padding: 4rem 2rem;
+  }
+
+  .button {
+    padding: 1rem 2rem;
   }
 }
 
