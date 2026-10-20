@@ -36,7 +36,7 @@ describe('UpcomingSessions', () => {
 
   it('should show one row per session', () => {
     const compiled = render(sessions);
-    expect(compiled.querySelectorAll('li')).toHaveSize(2);
+    expect(compiled.querySelectorAll('li')).toHaveLength(2);
     expect(compiled.textContent).toContain('First Session');
     expect(compiled.textContent).toContain('Hosted by Host Two');
   });

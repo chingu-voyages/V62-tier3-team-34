@@ -1,0 +1,69 @@
+<main class="reading-habit-page">
+  <section class="page-header">
+    <p class="eyebrow eyebrow--gold">
+      <span class="eyebrow__line"></span>
+      <span>The Path to Literary Discipline</span>
+    </p>
+
+    <h1 class="page-title">Six Practical Foundations for Daily Practice</h1>
+
+    <p class="page-subtitle">
+      Establishing a consistent reading practice relieves less on monumental bursts of willpower and
+      more on deliberate environmental design.
+    </p>
+  </section>
+
+  <section class="foundations-grid" aria-label="Six foundations for a daily reading practice">
+    @for (foundation of foundations; track foundation.number) {
+      <app-foundation-card [foundation]="foundation" />
+    }
+  </section>
+
+  <section class="habit-section">
+    <p class="eyebrow eyebrow--gold eyebrow--center">
+      <span class="eyebrow__line"></span>
+      <span>Curatorial Workspace • Practical Habits</span>
+    </p>
+
+    <h2 class="section-title section-title--center">Build Your Reading Habit</h2>
+
+    <p class="section-copy section-copy--center">
+      Transform reading from an occasional luxury into an effortless daily ritual. Discover the
+      mechanisms of literary discipline.
+    </p>
+  </section>
+
+  <section class="challenges-section" aria-labelledby="seasonal-challenges-heading">
+    <div class="challenge-header">
+      <p class="eyebrow eyebrow--gold">
+        <span class="eyebrow__line"></span>
+        <span>Structure &amp; Ambition</span>
+      </p>
+      <h3 id="seasonal-challenges-heading" class="section-title">Seasonal Reading Challenges</h3>
+      <p class="section-copy">
+        Explore diverse structures designed to keep your intellectual curiosity engaged throughout
+        the calendar year.
+      </p>
+    </div>
+
+    <div class="challenge-grid">
+      @for (challenge of challenges; track challenge.label) {
+        <app-challenge-card [challenge]="challenge" />
+      }
+    </div>
+  </section>
+
+  <section class="cta-section" aria-labelledby="next-page-heading">
+    <h3 id="next-page-heading" class="cta-title">Ready to Commit to Your Next Page?</h3>
+
+    <p class="cta-copy">
+      Don&rsquo;t wander through the archive alone. Let our curators recommend a tailored seasonal
+      schedule, track your progress, and welcome you into a circle of passionate conversationalists.
+    </p>
+
+    <div class="cta-actions">
+      <button class="btn btn--primary" type="button">Become a Member</button>
+      <button class="btn btn--secondary" type="button">View Partner Schedule</button>
+    </div>
+  </section>
+</main>
