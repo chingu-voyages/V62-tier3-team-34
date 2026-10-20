@@ -26,8 +26,8 @@
   align-items: center;
   gap: 0.65rem;
   margin: 0;
-  color: #986d2c;
-  font-size: 0.7rem;
+  color: var(--color-amber-800);
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   line-height: 1.5;
@@ -174,7 +174,7 @@ h3 {
 
 .pillar-card p {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -206,7 +206,7 @@ h3 {
 
 .ritual-copy > p:not(.eyebrow) {
   margin: 0.7rem 0;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
 }
 
 .ritual-copy blockquote {
