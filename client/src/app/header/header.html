@@ -22,12 +22,14 @@
     <!-- navigation -->
     <nav class="hidden md:flex items-center 
     justify-center gap-3 lg:gap-5 flex-1">
+    @if(router.url !== '/') {
       <a
         routerLink="/"
         class="text-amber-950 hover:text-forest hover:-translate-y-0.5
         whitespace-nowrap 
         transition-all duration-300"
         >Home</a>
+    }
       <a
         routerLink="/why-reading-matters"
         class="text-amber-950 hover:text-forest hover:-translate-y-0.5
@@ -92,6 +94,7 @@
       md:hidden flex flex-col gap-1 pt-4 px-4 pb-4 border-t
       border-black/5 bg-white/95 backdrop-blur-md shadow-lg"
       aria-label="Mobile navigation">
+      @if(router.url !== '/') {
       <a
         routerLink="/"
         (click)="closeMenu()"
@@ -99,6 +102,7 @@
          hover:text-green-900 transition-colors">
         Home
       </a>
+    }
       <a
         routerLink="/why-reading-matters"
         (click)="closeMenu()"
